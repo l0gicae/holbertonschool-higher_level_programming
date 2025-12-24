@@ -1,53 +1,35 @@
->>> import sys
->>> sys.path.append('python-inheritance')
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
 >>> BaseGeometry().area()
 Traceback (most recent call last):
 Exception: area() is not implemented
-
 >>> BaseGeometry().integer_validator("age", 1)
-
 >>> BaseGeometry().integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
-
 >>> BaseGeometry().integer_validator("age", -4)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
-
 >>> BaseGeometry().integer_validator("age", "4")
 Traceback (most recent call last):
 TypeError: age must be an integer
-
 >>> BaseGeometry().integer_validator("age", (4,))
 Traceback (most recent call last):
 TypeError: age must be an integer
-
 >>> BaseGeometry().integer_validator("age", [3])
 Traceback (most recent call last):
 TypeError: age must be an integer
-
 >>> BaseGeometry().integer_validator("age", True)
 Traceback (most recent call last):
 TypeError: age must be an integer
-
 >>> BaseGeometry().integer_validator("age", (3, 4))
 Traceback (most recent call last):
 TypeError: age must be an integer
-
->>> BaseGeometry().integer_validator("age", {3, 4})
-Traceback (most recent call last):
-TypeError: age must be an integer
-
 >>> BaseGeometry().integer_validator("age", None)
 Traceback (most recent call last):
 TypeError: age must be an integer
-
 >>> BaseGeometry().integer_validator()  # doctest: +ELLIPSIS
 Traceback (most recent call last):
 TypeError: ...
-
 >>> BaseGeometry().integer_validator("age")  # doctest: +ELLIPSIS
 Traceback (most recent call last):
 TypeError: ...

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Defines a BaseGeometry class."""
+"""Defines a BaseGeometry class with an unimplemented area method."""
 
 
 class BaseGeometry:
-    """Base class for geometry objects."""
+    """Base geometry class."""
 
     def area(self):
-        """Raise an exception because area is not implemented."""
+        """Raise Exception because area is not implemented."""
         raise Exception("area() is not implemented")
