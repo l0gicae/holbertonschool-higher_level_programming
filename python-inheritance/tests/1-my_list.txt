@@ -1,4 +1,6 @@
-The ``MyList`` class prints a sorted version of itself.
+Tests for MyList.print_sorted()
+
+Basic behavior (does not modify the original list):
 
 >>> MyList = __import__("1-my_list").MyList
 >>> my_list = MyList()
@@ -13,3 +15,17 @@ The ``MyList`` class prints a sorted version of itself.
 [1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+
+Works with negative numbers too:
+
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(-1)
+>>> my_list.append(2)
+>>> my_list.append(0)
+>>> print(my_list)
+[3, -1, 2, 0]
+>>> my_list.print_sorted()
+[-1, 0, 2, 3]
+>>> print(my_list)
+[3, -1, 2, 0]
